@@ -1,0 +1,72 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px -1px 8px 6px rgba(191, 85, 156, 0.53);
+    font-family: "Roboto", sans-serif;
+    background-color: #317773;
+    color: #E2D1F9;
+}
+
+.card-header h3 {
+    font-weight: 300;
+}
+
+.card-image img {
+    border-radius: 50%;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact span {
+    text-align: center;
+}
+
+.button {
+    margin-top: 25px;
+    background-color: rgb(4, 11, 77);
+    color: #E2D1F9;
+    padding: 13px 70px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button:hover {
+    color: orange;
+}
+
+.card-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.fa-brands {
+    color: #E2D1F9;
+    font-size: 23px;
+}
+
+.card-icons a:hover {
+    .fa-brands {
+        color: orange;
+    }
+}

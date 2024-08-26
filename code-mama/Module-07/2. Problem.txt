@@ -1,0 +1,16 @@
+//Write a program to create a function that checks if one string is a rotation of another. For example, "waterbottle" is a rotation of "erbottlewat" because you can rotate it to get the original string.
+
+<?php
+fscanf(STDIN, "%s %s", $main_str, $other_str);
+
+function check_rotat($s, $t)
+{
+    if (strlen($s) == strlen($t) && strlen($s) > 0) {
+        $concatenated = $s . $s;
+        return strpos($concatenated, $t) !== false;
+    }
+    return false;
+}
+
+$result = check_rotat($main_str, $other_str);
+echo $result ? "True" : "False";

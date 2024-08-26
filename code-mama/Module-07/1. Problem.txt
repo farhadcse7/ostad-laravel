@@ -1,0 +1,29 @@
+//Write a program to create a function that finds and counts all occurrences of a substring within a larger string. For instance, in the string "abababab," the substring "ab" appears four times.
+
+<?php
+
+fscanf(STDIN, "%s %s", $string, $substring);
+
+function countOccurrences($string, $substring)
+{
+    $count = 0;
+    $substringLength = strlen($substring);
+    $stringLength = strlen($string);
+
+    // Edge case: if the substring is empty, return 0
+    if ($substringLength == 0) {
+        return 0;
+    }
+
+    // Loop through the string to find all occurrences
+    for ($i = 0; $i <= $stringLength - $substringLength; $i++) {
+        if (substr($string, $i, $substringLength) === $substring) {
+            $count++;
+        }
+    }
+    return $count;
+}
+
+// Calculate and print the number of occurrences
+$occurrences = countOccurrences($string, $substring);
+echo $occurrences;

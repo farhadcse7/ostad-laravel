@@ -1,0 +1,33 @@
+//You are given two strings A and B. Your task is check whether the string B is anagram of string A or not. An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, “abcd” and “dabc” are an anagram of each other whereas "abcd" and "aabc" are not.
+
+
+<?php
+
+function checkAnagram2($s1, $s2)
+{
+    $data1 = str_split($s1);
+    $data2 = str_split($s2);
+
+    sort($data1);
+    sort($data2);
+
+    //print_r($data1);
+    //print_r($data2);
+
+    $s1 = implode($data1);
+    $s2 = implode($data2);
+
+    //print $s1." ".$s2."\n";
+    return strcmp($s1, $s2) == 0;
+}
+
+$s1 = trim(fgets(STDIN));
+$s2 = trim(fgets(STDIN));
+
+//print $s1 . " " . $s2;
+
+if (checkAnagram2($s1, $s2)) {
+    print "YES";
+} else {
+    print "NO";
+}

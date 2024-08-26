@@ -1,0 +1,15 @@
+//Write a program which will take seconds as input and output into hour:minute.
+
+<?php
+
+fscanf(STDIN, "%d", $seconds);
+
+$minutes = (int) ($seconds / 60);
+
+$hours = (int) ($minutes / 60);
+
+$remainingMinutes = $minutes % 60;
+
+print $hours . ":" . $remainingMinutes;
+
+?>

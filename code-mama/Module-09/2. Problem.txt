@@ -1,0 +1,28 @@
+//Write a program where two strings will be given, firstName and lastName, return a single string in the format "lastName, firstName".
+
+<?php
+
+fscanf(STDIN, "%s %s", $a, $b);
+
+print $b.", ". $a;
+
+?>
+
+--or--
+
+<?php
+
+$line = trim(fgets(STDIN));
+$data = explode(" ", $line);
+$a = $data[0];
+$b = $data[1];
+
+print concatName($a, $b);
+
+function concatName($a, $b)
+{
+    return $b . ", " . $a;
+}
+
+?>
+
